@@ -1,0 +1,4 @@
+# <name>          <device>                    <password>                      <options>
+locked_sda2     UUID=enter_your_uuid       /etc/cryptsetup-keys.d/sda2.key     bitlk # bitlocker
+                                                                              # luks for luks 
+                                                                              # tcrypt for truecrypt
