@@ -1,1 +1,7 @@
+# everything else is default. 
+# added this for /dev/sda2 because it is encrypted by bitlocker and i have to unlock it everytime i log in.
+# fstab's job is to define how partitions and block devices are to be mounted upon boot.
+# but fstab cannot decrypt a block device. that is the job of crypttab
+# check /etc/crypttab
 
+/dev/mapper/locked_sda2 /mnt            ntfs3   nofail,x-systemd.device-timeout=0       0 2
