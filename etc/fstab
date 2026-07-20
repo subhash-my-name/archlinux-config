@@ -3,6 +3,8 @@
 # fstab's job is to define how partitions and block devices are to be mounted upon boot.
 # but fstab cannot decrypt a block device. that is the job of crypttab
 # check /etc/crypttab
+# use ntfs-3g instead of ntfs3 becausentfs3 preserves NTFS permissions/ACLs, while ntfs-3g usually ignores them 
+# and maps all files to the uid=/gid= you specify. which is why ntfs-3g will let you write on the /hdd/ directory and ntfs3 will not.
 
 UUID=BC68E92868E8E25E   /home/sbh_user/hdd                      ntfs-3g   uid=1000,gid=1000,noacsrules,umask=022,nofail,x-systemd.device-timeout=0       0 2
 
